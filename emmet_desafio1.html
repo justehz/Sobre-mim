@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmet | Desafio 1</title>
+</head>
+
+<body>
+    <!-- Código do Desafio 1-->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#secao1">seção 1 </a></li>
+                <li><a href="#secao2">seção 2 </a></li>
+                <li><a href="#secao3">seção 3 </a></li>
+                <li><a href="#secao4">seção 4 </a></li>
+                <li><a href="#secao5">seção 5 </a></li>
+
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Fim do Desafio-->
+</body>
+
+</html>
+<!--codigo que faz isso acima: 
+header>nav.navbar>ul>li*5>a[href="#secao$"]{seção $} -->
+
+<header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#secao1">seção 1</a></li>
+            <li><a href="#secao2">seção 2</a></li>
+            <li><a href="#secao3">seção 3</a></li>
+            <li><a href="#secao4">seção 4</a></li>
+            <li><a href="#secao5">seção 5</a></li>
+        </ul>
+    </nav>
+</header>
+
+ <!-- Código do Desafio 2-->
+<header>
+<nav>
+    <ul>
+        <li><a href="">link 1</a></li>
+        <li><a href="">link 2</a></li>
+        <li><a href="">link 3</a></li>
+        <li><a href="">link 4</a></li>
+        <li><a href="">link 5</a></li>
+    </ul>
+</nav>
+<main>
+    <section>
+        <div>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div></div>
+        <img src="" alt="" height="50" width="50">
+     </section>
+</main>
+<footer>
+    <p></p>
+    <p></p>
+</footer>
+ <!-- Fim do Desafio-->
+<!--codigo que faz isso acima: -->
+
+header>nav>ul>li*5>a{link $}+(main>section>(div>p*2Lorem5)+div+img[src alt height=50 width=50])+footer>p*2
+
+
+
+
+
+
+

@@ -1,0 +1,260 @@
+/* Importando a fonte */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* Tema principal */
+:root {
+    /* Cores do modo normal */
+    --cor-primaria: #141313; /* cor de fundo */
+    --cor-secundaria: #f30000;
+    --cor-fundo: rgba(205, 205, 207, 0.755); /* fundo claro */
+    --cor-primaria-texto: #ffffff; /* texto branco */
+    --cor-secundaria-texto: #efecec;
+    --cor-bordas: #797676 1px solid;  /* bordas escuras */
+    --card-skill: #fff;
+    --section: #080808;
+}
+
+/* Modo escuro */
+[data-theme="dark"] {
+    --cor-primaria: #87afef;
+    --cor-secundaria: #0062ff;
+    --cor-fundo: #262627;
+    --cor-primaria-texto: #b9babd;
+    --cor-bordas: #848485 1px solid;
+    --cor-secundaria-texto: #ffffff;
+    --card-skill: #262525;
+    --section: #090909;
+}
+
+/* Modo de alto contraste */
+[data-theme="alto-contraste"] {
+    --cor-primaria: #fff;
+    --cor-secundaria: #fff;
+    --cor-fundo: #000;
+    --cor-primaria-texto: #fff;
+    --cor-secundaria-texto: #fff;
+    --cor-bordas: #ffff00;
+    --card-skill: #000;
+    --section: #000;
+}
+
+/* Definindo a fonte principal */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-primaria-texto);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgb(153, 156, 156);
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+header ul li a {
+    color: var(--cor-secundaria-texto);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+}
+
+header ul li a:hover {
+    background-color: rgb(201, 201, 193);
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+/* Títulos */
+h1, h2, h3 {
+    color: var(--cor-primaria-texto);
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 900;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 0;
+    color: var(--cor-primaria-texto);
+}
+
+h3 {
+    color: var(--cor-primaria-texto);
+}
+
+/* Seções */
+section {
+    background-color: var(--cor-fundo);
+    margin: 10vh auto;
+    padding: 1rem;
+    scroll-margin-top: 4rem;
+    border: var(--cor-bordas);
+    border-radius: 6px;
+    max-width: 900px;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--cor-primaria-texto);
+}
+
+ul {
+    padding-left: 1.2rem;
+    color: var(--cor-primaria);
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Imagens */
+img {
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+    border: 3px solid rgb(153, 156, 156);
+}
+
+.foto-sobre {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+    border: 3px solid rgb(153, 156, 156);
+}
+
+/* Links */
+a {
+    color: #87afef;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    color: #333;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.social-links a i {
+    margin-right: 5px;
+}
+
+.social-links a:hover {
+    color: #000;
+}
+
+/* Formulários */
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #333;
+}
+
+/* Rodapé */
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Cards */
+.skills-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.card-skill {
+    background-color: var(--card-skill);
+    border: 1px solid var(--cor-bordas);
+    border-radius: 10px;
+    padding: 1rem;
+    width: 200px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-skill h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.card-skill p {
+    margin: 0.5rem 0 0;
+    color: #666;
+}
+
+/* Tema normal */
+[data-theme="light"] {
+    --cor-primaria: #141313;
+    --cor-secundaria: #f30000;
+    --cor-fundo: rgba(205, 205, 207, 0.755);
+    --cor-primaria-texto: #242323;
+    --cor-secundaria-texto: #efecec;
+    --cor-bordas: #797676 1px solid;
+    --card-skill: #fff;
+    --section: #080808;
+}
